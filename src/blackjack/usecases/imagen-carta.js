@@ -1,0 +1,16 @@
+// <img class="carta" src="assets/cartas/2C.png">
+/**
+ * 
+ * @param {String} carta 
+ * @returns {HTMLImageElement}
+ */    
+export const imagenCarta = ( carta ) => { 
+    
+    if ( !carta ) throw new Error('La carta es un argumetno obligatorio');
+
+    const imgCarta = document.createElement('img');
+    imgCarta.src = `assets/cartas/${ carta }.png`; //3H, JD
+    imgCarta.classList.add('carta');
+
+    return imgCarta; 
+};
